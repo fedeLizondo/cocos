@@ -1,7 +1,8 @@
-import {Order} from "../entities/order";
+import OrderRequest from 'clients/request/OrderRequest';
+import OrderModel from 'Models/order';
 
 export default interface OrderService {
-    getAll(): typeof Order[]
-    getAllForUserId(userId:number): typeof Order[]
-    saveOrder(order:typeof Order): typeof Order
+  getAll(): Promise<OrderModel[]>
+  getAllForUserId(userId:number): Promise<OrderModel[]>
+  saveOrder(order:OrderRequest): Promise<OrderModel>
 }

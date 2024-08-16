@@ -1,6 +1,6 @@
-import Instrument from "../entities/instrument";
+import InstrumentModel from '../Models/instrument';
 
 export default interface InstrumentClient {
-    getAll(): typeof Instrument[]
-    getFromName(search: string): typeof Instrument[]
+  getAll(): Promise<InstrumentModel[]>
+  getFromName(search: string): Promise<InstrumentModel[]>
 }

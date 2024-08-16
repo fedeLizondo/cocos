@@ -1,11 +1,15 @@
+import { Portafolio } from './Models/portafolio';
 import express from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import cors from 'cors';
+import 'reflect-metadata';
+import { AppDataSource } from './clients/db';
 
 import * as middlewares from './middlewares';
 import api from './api';
-import instrumentController from './controllers/InstrumentsController'
+import instrumentController from './controllers/InstrumentsController';
+import portafolioController from './controllers/PortafolioController';
 import MessageResponse from './interfaces/MessageResponse';
 
 require('dotenv').config();
@@ -25,6 +29,7 @@ app.get<{}, MessageResponse>('/', (req, res) => {
 
 app.use('/api/v1', api);
 app.use('/instruments', instrumentController);
+app.use('/portafolio', portafolioController)
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);

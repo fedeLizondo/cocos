@@ -1,10 +1,13 @@
 {
   "compilerOptions": {
     "outDir": "dist",
+    "baseUrl": "./src",
     "sourceMap": true,
     "target": "esnext",
     "module": "commonjs",
     "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": true,
     "strict": true,
@@ -15,4 +18,7 @@
     "src/**/*.ts",
     "test/**/*.ts",
   ],
+  "exclude": [
+    "node_modules"
+  ]
 }
