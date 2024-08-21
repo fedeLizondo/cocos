@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "4fe654e0-84de-4ed8-b1d6-1c6f60c83d15",
+		"name": "Cocos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2777484"
+	},
+	"item": [
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "Orders from user",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "post order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"instrumentId\": 31,\n  \"userId\": 1,\n  \"side\": \"BUY\",\n  \"size\": 10,\n  \"type\": \"NEW\",\n  \"price\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancell Order",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "instrument",
+			"item": [
+				{
+					"name": "Instruments",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "portafolio",
+			"item": [
+				{
+					"name": "portafolio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/portafolio",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"portafolio"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "marketdata",
+			"item": [
+				{
+					"name": "marketdata",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
